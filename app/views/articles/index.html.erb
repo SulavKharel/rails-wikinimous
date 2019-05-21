@@ -1,0 +1,13 @@
+<div class="navbar nav">
+  <h4>Wikinimous</h4>
+  <h4>New Article</h4>
+</div>
+<h2 style="text-align: center">Welcome to The Article</h2>
+<% @articles.each do |article| %>
+<div class="container">
+    <div class="card">
+      <h3><%= link_to article.title, article_path(article), class: "text" %></h3>
+      <p><%= article.content %></p>
+    </div>
+</div>
+<% end %>
